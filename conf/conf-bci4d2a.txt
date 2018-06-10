@@ -1,0 +1,48 @@
+sep = comma # space or comma, sep in raw/ 
+numRawChannels = 25
+nUseChannels = 22
+numClasses = 4
+
+init_window_size = 100 # normalize array frame, < 375 pts 
+augmentTimes = 0   # 0 is do not aug. 
+downsample = 2  # take one sp every # sp
+sampleRate = 125  # sp rate   after   downsamplng 
+secondPerFrame = 3  # 0.888=111 sp per frame, 0.48=60sp
+shiftRatio = 1  # shift 88/111 sp, so 4 steps: 3* 88+111=375. int+0.000000001, 8steps: 0.75. 
+
+secondPerFile = 5  # per sameLabel file
+stateStep = 1
+
+scatter_mc = -1 # scatter channel into batch to store, -1 avoid.
+mc_num_per_key = 4      # N batch data per key max size, memcached.
+cache_prefix = z   # 25chn:4, 22chn:z
+
+trainfiles = A01T.txt,A02T.txt,A03T.txt,A04T.txt,A05T.txt,A06T.txt,A07T.txt,A08T.txt,A09T.txt
+testfiles = A01E.txt,A02E.txt,A03E.txt,A04E.txt,A05E.txt,A06E.txt,A07E.txt,A08E.txt,A09E.txt
+
+nepoch = 200
+batch_size = 40
+init_lr = 0.01
+end_lr =  0.0005
+regularize_coef = 7e-4 # l2_loss 6-4, 8
+
+num_subj = 9
+
+s0 = A01T.txt
+s0-t = A01E.txt
+s1 = A02T.txt
+s1-t = A02E.txt
+s2 = A03T.txt
+s2-t = A03E.txt
+s3 = A04T.txt
+s3-t = A04E.txt
+s4 = A05T.txt
+s4-t = A05E.txt
+s5 = A06T.txt
+s5-t = A06E.txt
+s6 = A07T.txt
+s6-t = A07E.txt
+s7 = A08T.txt
+s7-t = A08E.txt
+s8 = A09T.txt
+s8-t = A09E.txt

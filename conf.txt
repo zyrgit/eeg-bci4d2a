@@ -1,0 +1,29 @@
+from_conf     = 1
+from_tasklist = 0
+
+use_cache = 1  #    0: not memcached
+cache_place = lookup   # local or servers or lookup 
+
+cache_servers = tarekc26,tarekc04,tarekc15,tarekc28,tarekc14,tarekc16,tarekc10,tarekc08,tarekc40,tarekc18,tarekc17,tarekc34,tarekc07,tarekc19,tarekc12
+
+convertToSampleRate = 125
+
+datasets = bci3d3a bci3d4a bci3d4c bci3d5 bci4d2a
+dataSetsDirshu = /dccstor/shu1/bci/
+dataProcDirshu = /dccstor/shu1/bci/
+dataSetsDirsrallap = /dccstor/srallap1/eeg/bci
+dataProcDirsrallap = /dccstor/srallap1/eeg/bci
+dataSetsDirzhao97 = /home/zhao97/bci/
+dataProcDirzhao97 = /home/zhao97/bci/
+
+rawfolder = raw/
+datafolder = data22/
+metafolder = meta22/
+# datafolder = data125/
+# metafolder = meta125/
+
+mc_train_da_str = i  #  a 1, e 2, i 0
+mc_train_lb_str = j  #  b 1, f 2, j 0
+mc_test_da_str  = k  #  c 1, g 2, k 0
+mc_test_lb_str  = l  #  d 1, h 2, l 0
+

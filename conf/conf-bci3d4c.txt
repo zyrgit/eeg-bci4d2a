@@ -1,0 +1,32 @@
+sep = space # space or comma, sep in raw/ 
+numRawChannels = 118
+nUseChannels = 118
+numClasses = 2
+
+init_window_size = 150 # normalize array frame, < 375 pts 
+augmentTimes = 0   # 0 is do not aug. 
+downsample = 8  # take one sp every # sp
+sampleRate = 125  # sp rate   after   downsamplng 
+secondPerFrame = 3  # 0.888=111 sp per frame, 0.48=60sp
+shiftRatio = 1  # shift 88/111 sp, so 4 steps: 3* 88+111=375. int+0.000000001, 8steps: 0.75. 
+
+stateStep = 1
+secondPerFile = 3  # per sameLabel file
+
+scatter_mc = 2 # scatter channel into batch to store, -1 avoid.
+mc_num_per_key = 40      # N batch data per key max size, memcached.
+cache_prefix = 2
+
+trainfiles= data_set_IVb_al_train.txt
+testfiles= data_set_IVc_al_test.txt
+
+nepoch = 20
+batch_size = 20
+init_lr = 0.01
+end_lr = 0.001
+regularize_coef = 7e-4 # l2_loss
+
+num_subj = 1
+
+s0 = data_set_IVb_al_train.txt
+s0-t = data_set_IVc_al_test.txt

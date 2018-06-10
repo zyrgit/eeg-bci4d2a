@@ -1,0 +1,38 @@
+sep = space # space or comma, sep in raw/ 
+numRawChannels = 32
+nUseChannels = 32
+numClasses = 3
+
+init_window_size = 150 # normalize array frame, < 375 pts 
+augmentTimes = 0   # 0 is do not aug. 
+downsample = 4  # take one sp every # sp
+sampleRate = 128  # sp rate   after   downsamplng 
+secondPerFrame = 3  # 0.888=111 sp per frame, 0.48=60sp
+shiftRatio = 1  # shift 88/111 sp, so 4 steps: 3* 88+111=375. int+0.000000001, 8steps: 0.75. 
+
+stateStep = 1
+secondPerFile = 18  # per sameLabel file
+
+scatter_mc = 2 # scatter channel into batch to store, -1 avoid.
+mc_num_per_key = 40      # N batch data per key max size, memcached.
+cache_prefix = 3
+
+trainfiles= train_subject1_raw01.txt,train_subject1_raw02.txt,train_subject1_raw03.txt,train_subject2_raw01.txt,train_subject2_raw02.txt,train_subject2_raw03.txt,train_subject3_raw01.txt,train_subject3_raw02.txt,train_subject3_raw03.txt
+
+testfiles= test_subject1_raw04.txt,test_subject2_raw04.txt,test_subject3_raw04.txt
+
+nepoch = 20
+batch_size = 20
+init_lr = 0.01
+end_lr = 0.001
+regularize_coef = 7e-4 # l2_loss
+
+num_subj = 3
+
+s0 = train_subject1_raw01.txt,train_subject1_raw02.txt,train_subject1_raw03.txt
+s0-t = test_subject1_raw04.txt
+s1 = train_subject2_raw01.txt,train_subject2_raw02.txt,train_subject2_raw03.txt
+s1-t = test_subject2_raw04.txt
+s2 = train_subject3_raw01.txt,train_subject3_raw02.txt,train_subject3_raw03.txt
+s2-t = test_subject3_raw04.txt
+
