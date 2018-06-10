@@ -8,7 +8,7 @@ This code for EEG classification task is using Tensorflow. It exploits Memcached
 
 ## Paper using this code
 
-'''
+```
 @inproceedings{zhao2017improvement,
   title={On the improvement of classifying EEG recordings using neural networks},
   author={Zhao, Yiran and Yao, Shuochao and Hu, Shaohan and Chang, Shiyu and Ganti, Raghu and Srivatsa, Mudhakar and Li, Shen and Abdelzaher, Tarek},
@@ -17,4 +17,4 @@ This code for EEG classification task is using Tensorflow. It exploits Memcached
   year={2017},
   organization={IEEE}
 }
-'''
+```
